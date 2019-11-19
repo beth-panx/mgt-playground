@@ -45,7 +45,9 @@
     "prepack": "npm run build",
     "prettier:base": "prettier --parser typescript",
     "prettier:check": "npm run prettier:base -- --list-different \"{src,tests}/**/*.{ts,tsx}\"",
-    "prettier:write": "npm run prettier:base -- --write \"{src,tests}/**/*.{ts,tsx}\""
+    "prettier:write": "npm run prettier:base -- --write \"{src,tests}/**/*.{ts,tsx}\"",
+    "storybook": "start-storybook -p 9001",
+    "storybook:build": "build-storybook -o _site -s storybook-static"
   },
   "dependencies": {
     "@microsoft/microsoft-graph-client": "^2.0.0",
@@ -62,7 +64,10 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-typescript": "^7.3.3",
+    "@open-wc/demoing-storybook": "^0.4.0",
+    "@storybook/preset-typescript": "^1.1.0",
     "@types/jest": "^24.0.11",
+    "@types/webpack": "^4.41.0",
     "@webcomponents/webcomponentsjs": "^2.2.10",
     "babel-polyfill": "6.5.0",
     "browser-sync": "^2.26.7",
