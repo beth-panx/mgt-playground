@@ -1,11 +1,13 @@
 import { html } from 'lit-element';
+import { withKnobs, withWebComponentsKnobs } from '@open-wc/demoing-storybook';
 import '../dist/es6/components/mgt-people/mgt-people';
 import '../dist/es6/mock/mgt-mock-provider';
 import '../dist/es6/mock/MockProvider';
 
 export default {
-  title: 'components|mgt-people',
-  component: 'mgt-people'
+  title: 'MGT|mgt-people',
+  component: 'mgt-people',
+  decorators: [withKnobs, withWebComponentsKnobs]
 };
 
 export const people = () => html`

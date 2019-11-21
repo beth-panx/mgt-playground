@@ -2,73 +2,6 @@
   "version": 2,
   "tags": [
     {
-      "name": "mgt-person-card",
-      "description": "Web Component used to show detailed data for a person in the\nMicrosoft Graph",
-      "jsDoc": "/**\n * Web Component used to show detailed data for a person in the\n * Microsoft Graph\n *\n * @export\n * @class MgtPersonCard\n * @extends {MgtTemplatedComponent}\n */",
-      "attributes": [
-        {
-          "name": "person-details",
-          "description": "Set the person details to render",
-          "jsDoc": "/**\n   * Set the person details to render\n   *\n   * @type {(MicrosoftGraph.User\n   *     | MicrosoftGraph.Person\n   *     | MicrosoftGraph.Contact)}\n   * @memberof MgtPersonCard\n   */",
-          "type": "User | Person | Contact"
-        },
-        {
-          "name": "person-image",
-          "description": "Set the image of the person\nSet to '@' to look up image from the graph",
-          "jsDoc": "/**\n   * Set the image of the person\n   * Set to '@' to look up image from the graph\n   *\n   * @type {string}\n   * @memberof MgtPersonCard\n   */",
-          "type": "string"
-        },
-        {
-          "name": "is-expanded",
-          "description": "Gets or sets whether additional details section is rendered",
-          "jsDoc": "/**\n   * Gets or sets whether additional details section is rendered\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
-          "type": "boolean"
-        },
-        {
-          "name": "inherit-details",
-          "description": "Gets or sets whether additional details should be inherited from an mgt-person parent\nUseful when used as template in an mgt-person component",
-          "jsDoc": "/**\n   * Gets or sets whether additional details should be inherited from an mgt-person parent\n   * Useful when used as template in an mgt-person component\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
-          "type": "boolean"
-        }
-      ],
-      "properties": [
-        {
-          "name": "templateConverters",
-          "description": "Collection of functions to be used in template binding",
-          "jsDoc": "/**\n   * Collection of functions to be used in template binding\n   *\n   * @type {*}\n   * @memberof MgtTemplatedComponent\n   */",
-          "type": "any"
-        },
-        {
-          "name": "personDetails",
-          "description": "Set the person details to render",
-          "jsDoc": "/**\n   * Set the person details to render\n   *\n   * @type {(MicrosoftGraph.User\n   *     | MicrosoftGraph.Person\n   *     | MicrosoftGraph.Contact)}\n   * @memberof MgtPersonCard\n   */",
-          "type": "User | Person | Contact"
-        },
-        {
-          "name": "personImage",
-          "description": "Set the image of the person\nSet to '@' to look up image from the graph",
-          "jsDoc": "/**\n   * Set the image of the person\n   * Set to '@' to look up image from the graph\n   *\n   * @type {string}\n   * @memberof MgtPersonCard\n   */",
-          "type": "string"
-        },
-        {
-          "name": "isExpanded",
-          "description": "Gets or sets whether additional details section is rendered",
-          "jsDoc": "/**\n   * Gets or sets whether additional details section is rendered\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
-          "type": "boolean"
-        },
-        {
-          "name": "inheritDetails",
-          "description": "Gets or sets whether additional details should be inherited from an mgt-person parent\nUseful when used as template in an mgt-person component",
-          "jsDoc": "/**\n   * Gets or sets whether additional details should be inherited from an mgt-person parent\n   * Useful when used as template in an mgt-person component\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
-          "type": "boolean"
-        },
-        {
-          "name": "renderAdditionalSection",
-          "type": "TemplateResult | null"
-        }
-      ]
-    },
-    {
       "name": "mgt-person",
       "description": "The person component is used to display a person or contact by using their photo, name, and/or email address.",
       "jsDoc": "/**\n * The person component is used to display a person or contact by using their photo, name, and/or email address.\n *\n * @export\n * @class MgtPerson\n * @extends {MgtTemplatedComponent}\n */",
@@ -164,6 +97,68 @@
           "description": "Sets how the person-card is invoked\nSet to PersonCardInteraction.none to not show the card",
           "jsDoc": "/**\n   * Sets how the person-card is invoked\n   * Set to PersonCardInteraction.none to not show the card\n   *\n   * @type {PersonCardInteraction}\n   * @memberof MgtPerson\n   */",
           "type": "PersonCardInteraction"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--avatar-size-s",
+          "description": "Avatar size",
+          "type": "Length"
+        },
+        {
+          "name": "--avatar-size",
+          "description": "Avatar size when both name and email are shown",
+          "type": "Length"
+        },
+        {
+          "name": "--avatar-font-size--s",
+          "description": "Avatar font size",
+          "type": "Length"
+        },
+        {
+          "name": "--avatar-font-size",
+          "description": "Avatar font-size when both name and email are shown",
+          "type": "Length"
+        },
+        {
+          "name": "--avatar-border",
+          "description": "Avatar border",
+          "type": "String"
+        },
+        {
+          "name": "--initials-color",
+          "description": "Initials color",
+          "type": "Color"
+        },
+        {
+          "name": "--initials-background-color",
+          "description": "Initials background color",
+          "type": "Color"
+        },
+        {
+          "name": "--font-size",
+          "description": "Font size",
+          "type": "Length"
+        },
+        {
+          "name": "--font-weight",
+          "description": "Font weight",
+          "type": "Length"
+        },
+        {
+          "name": "--color",
+          "description": "Color",
+          "type": "Color"
+        },
+        {
+          "name": "--email-font-size",
+          "description": "Email font size",
+          "type": "Length"
+        },
+        {
+          "name": "--email-color",
+          "description": "Email color",
+          "type": "Color"
         }
       ]
     },
@@ -272,6 +267,78 @@
           "name": "hours",
           "type": "number"
         }
+      ],
+      "cssProperties": [
+        {
+          "name": "--event-box-shadow",
+          "description": "Event box shadow color and size",
+          "type": "String"
+        },
+        {
+          "name": "--event-margin",
+          "description": "Event margin",
+          "type": "String"
+        },
+        {
+          "name": "--event-padding",
+          "description": "Event padding",
+          "type": "String"
+        },
+        {
+          "name": "--event-background",
+          "description": "Event background color",
+          "type": "Color"
+        },
+        {
+          "name": "--event-border",
+          "description": "Event border color",
+          "type": "String"
+        },
+        {
+          "name": "--agenda-header-margin",
+          "description": "Agenda header margin size",
+          "type": "String"
+        },
+        {
+          "name": "--agenda-header-font-size",
+          "description": "Agenda header font size",
+          "type": "Length"
+        },
+        {
+          "name": "--agenda-header-color",
+          "description": "Agenda header color",
+          "type": "Color"
+        },
+        {
+          "name": "--event-time-font-size",
+          "description": "Event time font size",
+          "type": "Length"
+        },
+        {
+          "name": "--event-time-color",
+          "description": "Event time color",
+          "type": "Color"
+        },
+        {
+          "name": "--event-subject-font-size",
+          "description": "Event subject font size",
+          "type": "Length"
+        },
+        {
+          "name": "--event-subject-color",
+          "description": "Event subject color",
+          "type": "Color"
+        },
+        {
+          "name": "--event-location-font-size",
+          "description": "Event location font size",
+          "type": "Length"
+        },
+        {
+          "name": "--event-location-color",
+          "description": "Event location color",
+          "type": "Color"
+        }
       ]
     },
     {
@@ -368,6 +435,58 @@
           "jsDoc": "/**\n   * allows developer to use specific user details for login\n   * @type {MgtPersonDetails}\n   */",
           "type": "User"
         }
+      ],
+      "cssProperties": [
+        {
+          "name": "--font-size",
+          "description": "Login font size",
+          "type": "Length"
+        },
+        {
+          "name": "--font-weight",
+          "description": "Login font weight",
+          "type": "Length"
+        },
+        {
+          "name": "--height",
+          "description": "Login height percentage",
+          "type": "String"
+        },
+        {
+          "name": "--margin",
+          "description": "Margin size",
+          "type": "String"
+        },
+        {
+          "name": "--padding",
+          "description": "Padding size",
+          "type": "String"
+        },
+        {
+          "name": "--color",
+          "description": "Login font color",
+          "type": "Color"
+        },
+        {
+          "name": "--background-color",
+          "description": "Login background color",
+          "type": "Color"
+        },
+        {
+          "name": "--background-color--hover",
+          "description": "Login background hover color",
+          "type": "Color"
+        },
+        {
+          "name": "--popup-content-background-color",
+          "description": "Popup content background color",
+          "type": "Color"
+        },
+        {
+          "name": "--popup-command-font-size",
+          "description": "Popup command font size",
+          "type": "Length"
+        }
       ]
     },
     {
@@ -430,6 +549,18 @@
           "description": "array of user picked people.",
           "jsDoc": "/**\n   *  array of user picked people.\n   * @type {Array<any>}\n   */",
           "type": "(User | Person | Contact)[]"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--people-list-background-color",
+          "description": "People list background color",
+          "type": "Color"
+        },
+        {
+          "name": "--accent-color",
+          "description": "Accent color",
+          "type": "Color"
         }
       ]
     },
@@ -505,6 +636,107 @@
           "description": "Sets how the person-card is invoked\nSet to PersonCardInteraction.none to not show the card",
           "jsDoc": "/**\n   * Sets how the person-card is invoked\n   * Set to PersonCardInteraction.none to not show the card\n   *\n   * @type {PersonCardInteraction}\n   * @memberof MgtPerson\n   */",
           "type": "PersonCardInteraction"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--list-margin",
+          "description": "List margin for component",
+          "type": "String"
+        },
+        {
+          "name": "--avatar-margin",
+          "description": "Margin for each person",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "mgt-person-card",
+      "description": "Web Component used to show detailed data for a person in the\nMicrosoft Graph",
+      "jsDoc": "/**\n * Web Component used to show detailed data for a person in the\n * Microsoft Graph\n *\n * @export\n * @class MgtPersonCard\n * @extends {MgtTemplatedComponent}\n */",
+      "attributes": [
+        {
+          "name": "person-details",
+          "description": "Set the person details to render",
+          "jsDoc": "/**\n   * Set the person details to render\n   *\n   * @type {(MicrosoftGraph.User\n   *     | MicrosoftGraph.Person\n   *     | MicrosoftGraph.Contact)}\n   * @memberof MgtPersonCard\n   */",
+          "type": "User | Person | Contact"
+        },
+        {
+          "name": "person-image",
+          "description": "Set the image of the person\nSet to '@' to look up image from the graph",
+          "jsDoc": "/**\n   * Set the image of the person\n   * Set to '@' to look up image from the graph\n   *\n   * @type {string}\n   * @memberof MgtPersonCard\n   */",
+          "type": "string"
+        },
+        {
+          "name": "is-expanded",
+          "description": "Gets or sets whether additional details section is rendered",
+          "jsDoc": "/**\n   * Gets or sets whether additional details section is rendered\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
+          "type": "boolean"
+        },
+        {
+          "name": "inherit-details",
+          "description": "Gets or sets whether additional details should be inherited from an mgt-person parent\nUseful when used as template in an mgt-person component",
+          "jsDoc": "/**\n   * Gets or sets whether additional details should be inherited from an mgt-person parent\n   * Useful when used as template in an mgt-person component\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "templateConverters",
+          "description": "Collection of functions to be used in template binding",
+          "jsDoc": "/**\n   * Collection of functions to be used in template binding\n   *\n   * @type {*}\n   * @memberof MgtTemplatedComponent\n   */",
+          "type": "any"
+        },
+        {
+          "name": "personDetails",
+          "description": "Set the person details to render",
+          "jsDoc": "/**\n   * Set the person details to render\n   *\n   * @type {(MicrosoftGraph.User\n   *     | MicrosoftGraph.Person\n   *     | MicrosoftGraph.Contact)}\n   * @memberof MgtPersonCard\n   */",
+          "type": "User | Person | Contact"
+        },
+        {
+          "name": "personImage",
+          "description": "Set the image of the person\nSet to '@' to look up image from the graph",
+          "jsDoc": "/**\n   * Set the image of the person\n   * Set to '@' to look up image from the graph\n   *\n   * @type {string}\n   * @memberof MgtPersonCard\n   */",
+          "type": "string"
+        },
+        {
+          "name": "isExpanded",
+          "description": "Gets or sets whether additional details section is rendered",
+          "jsDoc": "/**\n   * Gets or sets whether additional details section is rendered\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
+          "type": "boolean"
+        },
+        {
+          "name": "inheritDetails",
+          "description": "Gets or sets whether additional details should be inherited from an mgt-person parent\nUseful when used as template in an mgt-person component",
+          "jsDoc": "/**\n   * Gets or sets whether additional details should be inherited from an mgt-person parent\n   * Useful when used as template in an mgt-person component\n   *\n   * @type {boolean}\n   * @memberof MgtPersonCard\n   */",
+          "type": "boolean"
+        },
+        {
+          "name": "renderAdditionalSection",
+          "type": "TemplateResult | null"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--font-size",
+          "description": "Font size",
+          "type": "Length"
+        },
+        {
+          "name": "--font-weight",
+          "description": "Font weight",
+          "type": "Length"
+        },
+        {
+          "name": "--height",
+          "description": "Height",
+          "type": "String"
+        },
+        {
+          "name": "--background-color",
+          "description": "Background color",
+          "type": "Color"
         }
       ]
     },
@@ -716,6 +948,193 @@
         {
           "name": "isLoading",
           "type": "TemplateResult | null"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--tasks-header-padding",
+          "description": "Tasks header padding",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-header-margin",
+          "description": "Tasks header margin",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-title-padding",
+          "description": "Tasks title padding",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-plan-title-font-size",
+          "description": "Tasks plan title font size",
+          "type": "Length"
+        },
+        {
+          "name": "--tasks-plan-title-padding",
+          "description": "Tasks plan title padding",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-new-button-width",
+          "description": "Tasks new button width",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-new-button-height",
+          "description": "Tasks new button height",
+          "type": "Length"
+        },
+        {
+          "name": "--tasks-new-button-color",
+          "description": "Tasks new button color",
+          "type": "Color"
+        },
+        {
+          "name": "--tasks-new-button-background",
+          "description": "Tasks new button background",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-new-button-border",
+          "description": "Tasks new button border",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-new-button-hover-background",
+          "description": "Tasks new button hover background",
+          "type": "Color"
+        },
+        {
+          "name": "--tasks-new-button-active-background",
+          "description": "Tasks new button active background",
+          "type": "Color"
+        },
+        {
+          "name": "--tasks-new-task-name-margin",
+          "description": "Tasks new task name margin",
+          "type": "String"
+        },
+        {
+          "name": "--task-margin",
+          "description": "Task margin",
+          "type": "String"
+        },
+        {
+          "name": "--task-box-shadow",
+          "description": "Task box shadow",
+          "type": "String"
+        },
+        {
+          "name": "--task-background",
+          "description": "Task background",
+          "type": "Color"
+        },
+        {
+          "name": "--task-border",
+          "description": "Task border",
+          "type": "String"
+        },
+        {
+          "name": "--task-header-color",
+          "description": "Task header color",
+          "type": "Color"
+        },
+        {
+          "name": "--task-header-margin",
+          "description": "Task header margin",
+          "type": "String"
+        },
+        {
+          "name": "--task-detail-icon-margin",
+          "description": "Task detail icon margin",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-margin",
+          "description": "Task new margin",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-border",
+          "description": "Task new border",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-line-margin",
+          "description": "Task new line margin",
+          "type": "String"
+        },
+        {
+          "name": "--tasks-new-line-border",
+          "description": "Tasks new line border",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-input-margin",
+          "description": "Task new input margin",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-input-padding",
+          "description": "Task new input padding",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-input-font-size",
+          "description": "Task new input font size",
+          "type": "Length"
+        },
+        {
+          "name": "--task-new-input-active-border",
+          "description": "Task new input active border",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-select-border",
+          "description": "Task new select border",
+          "type": "String"
+        },
+        {
+          "name": "--task-new-add-button-background",
+          "description": "Task new add button background",
+          "type": "Color"
+        },
+        {
+          "name": "--task-new-add-button-disabled-background",
+          "description": "Task new add button disabled background",
+          "type": "Color"
+        },
+        {
+          "name": "--task-new-cancel-button-color",
+          "description": "Task new cancel button color",
+          "type": "Color"
+        },
+        {
+          "name": "--task-complete-background",
+          "description": "Task complete background",
+          "type": "Color"
+        },
+        {
+          "name": "--task-complete-border",
+          "description": "Task complete border",
+          "type": "String"
+        },
+        {
+          "name": "--task-complete-header-color",
+          "description": "Task complete header color",
+          "type": "Color"
+        },
+        {
+          "name": "--task-complete-detail-color",
+          "description": "Task complete detail color",
+          "type": "Color"
+        },
+        {
+          "name": "--task-complete-detail-icon-color",
+          "description": "Task complete detail icon color",
+          "type": "Color"
         }
       ]
     },
