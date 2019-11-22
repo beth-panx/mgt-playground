@@ -1,11 +1,11 @@
 import { html } from 'lit-element';
 import { withKnobs, withWebComponentsKnobs } from '@open-wc/demoing-storybook';
-import '../dist/es6/components/mgt-agenda/mgt-agenda';
-import '../dist/es6/mock/mgt-mock-provider';
-import '../dist/es6/mock/MockProvider';
+import '../../dist/es6/components/mgt-agenda/mgt-agenda';
+import '../../dist/es6/mock/mgt-mock-provider';
+import '../../dist/es6/mock/MockProvider';
 
 export default {
-  title: 'MGT|mgt-agenda',
+  title: 'Mock Provider|mgt-agenda',
   component: 'mgt-agenda',
   decorators: [withKnobs, withWebComponentsKnobs]
 };

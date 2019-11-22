@@ -1,11 +1,11 @@
 import { html } from 'lit-element';
 import { withKnobs, withWebComponentsKnobs } from '@open-wc/demoing-storybook';
-import '../dist/es6/components/mgt-people-picker/mgt-people-picker';
-import '../dist/es6/mock/mgt-mock-provider';
-import '../dist/es6/mock/MockProvider';
+import '../../dist/es6/components/mgt-people-picker/mgt-people-picker';
+import '../../dist/es6/mock/mgt-mock-provider';
+import '../../dist/es6/mock/MockProvider';
 
 export default {
-  title: 'MGT|mgt-people-picker',
+  title: 'Mock Provider|mgt-people-picker',
   component: 'mgt-people-picker',
   decorators: [withKnobs, withWebComponentsKnobs]
 };
