@@ -10,7 +10,34 @@ export default {
   decorators: [withKnobs, withWebComponentsKnobs]
 };
 
-export const agenda = () => html`
+export const simple = () => html`
   <mgt-mock-provider></mgt-mock-provider>
-  <mgt-agenda group-by-day days="5"></mgt-agenda>
+  <mgt-agenda></mgt-agenda>
+`;
+
+export const getByEventQuery = () => html`
+  <mgt-mock-provider></mgt-mock-provider>
+  <mgt-agenda event-query="/me/events?orderby=start/dateTime"></mgt-agenda>
+`;
+
+export const getByDate = () => html`
+  <mgt-mock-provider></mgt-mock-provider>
+  <mgt-agenda group-by-day date="May 7, 2019" days="3"></mgt-agenda>
+`;
+
+export const getByEventTemplate = () => html`
+  <mgt-mock-provider></mgt-mock-provider>
+  <mgt-agenda>
+    <template data-type="event">
+      <button class="eventButton">
+        <div class="event-subject">{{ event.subject }}</div>
+        <div data-for="attendee in event.attendees">
+          <mgt-person person-query="{{ attendee.emailAddress.name }}" show-name show-email> </mgt-person>
+        </div>
+      </button>
+    </template>
+    <template data-type="no-data">
+      There are no events found!
+    </template>
+  </mgt-agenda>
 `;

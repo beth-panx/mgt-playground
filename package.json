@@ -47,7 +47,13 @@
     "prettier:check": "npm run prettier:base -- --list-different \"{src,tests}/**/*.{ts,tsx}\"",
     "prettier:write": "npm run prettier:base -- --write \"{src,tests}/**/*.{ts,tsx}\"",
     "storybook": "start-storybook -p 9001",
-    "storybook:build": "build-storybook -o _site -s storybook-static"
+    "storybook:build": "build-storybook -o _site -s storybook-static",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "storybook-deployer": {
+    "gitUsername": "@microsoft/mgt",
+    "gitEmail": "noreply@microsoft.com",
+    "commitMessage": "Deploy Storybook [skip ci]"
   },
   "dependencies": {
     "@microsoft/microsoft-graph-client": "^2.0.0",
@@ -66,6 +72,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@open-wc/demoing-storybook": "^0.4.0",
     "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@types/jest": "^24.0.11",
     "@types/webpack": "^4.41.0",
     "@webcomponents/webcomponentsjs": "^2.2.10",
