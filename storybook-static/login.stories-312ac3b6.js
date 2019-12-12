@@ -1,2 +1,0 @@
-import{e as o,f as t}from"./index-3a445c6b.js";import{h as m}from"./lit-html-c7682711.js";import"./Graph-3b72116e.js";import"./mgt-mock-provider-3678bf7a.js";import"./mgt-login-ad10d5b1.js";const r=()=>m` <mgt-mock-provider></mgt-mock-provider> <mgt-login></mgt-login> `;export default{title:"Mock Provider|mgt-login",component:"mgt-login",decorators:[o,t]};export{r as login};
-//# sourceMappingURL=login.stories-312ac3b6.js.map
