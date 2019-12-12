@@ -38,3 +38,4 @@ package-lock.json
 *-css.ts
 
 storybook-static/
+_site
